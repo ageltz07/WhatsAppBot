@@ -7,7 +7,8 @@ import os # For accessing environment variables
 from marketstack import get_stock_info 
 
 # Initialize the flask application
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 # Fetch needed environment variables
 ACCOUNT_ID = os.environ.get('TWILIO_ACCOUNT')
@@ -49,7 +50,7 @@ def process_msg(msg):
         response = 'Please type <Help> for instructions on how to run the MarketStack Bot'
     return response
 
-@app.route('/webhook', methods=["POST"])
+@application.route('/', methods=["POST"])
 def webhook():
     f = request.form
 
