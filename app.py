@@ -7,6 +7,7 @@ import os # For accessing environment variables
 from marketstack import get_stock_info 
 
 # Initialize the flask application
+# Needs to be "application" for AWS Elastic Beanstalk
 application = Flask(__name__)
 app = application
 
