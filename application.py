@@ -50,7 +50,11 @@ def process_msg(msg):
         response = 'Please type <Help> for instructions on how to run the MarketStack Bot'
     return response
 
-@application.route('/', methods=["POST"])
+@application.route('/')
+def hello():
+    return "Hello World"
+
+@application.route('/webhook', methods=["POST"])
 def webhook():
     f = request.form
 
