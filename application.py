@@ -8,8 +8,7 @@ from marketstack import get_stock_info
 
 # Initialize the flask application
 # Needs to be "application" for AWS Elastic Beanstalk
-application = Flask(__name__)
-app = application
+application = app = Flask(__name__)
 
 # Fetch needed environment variables
 ACCOUNT_ID = os.environ.get('TWILIO_ACCOUNT')
