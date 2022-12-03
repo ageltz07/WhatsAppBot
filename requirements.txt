@@ -34,5 +34,4 @@ typing_extensions==4.4.0
 urllib3==1.26.12
 Werkzeug==2.2.2
 wsgi-request-logger==0.4.6
-zappa==0.55.0
 zipp==3.10.0
