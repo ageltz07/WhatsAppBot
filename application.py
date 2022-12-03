@@ -1,21 +1,26 @@
-# Import statements
+# Import statements for flask
 from flask import Flask
 from flask import request
+
+# Need to work with the twilio api
 from twilio.rest import Client
-import os # For accessing environment variables
+
+# For accessing environment variables
+import os
 
 from marketstack import get_stock_info 
 
 # Initialize the flask application
-# Needs to be "application" for AWS Elastic Beanstalk
-application = app = Flask(__name__)
+app = Flask(__name__)
 
 # Fetch needed environment variables
 ACCOUNT_ID = os.environ.get('TWILIO_ACCOUNT')
 TWILIO_TOKEN = os.environ.get('TWILIO_TOKEN')
+
+# Twilio number for sending messages
 TWILIO_NUMBER = 'whatsapp:+14155238886'
 
-# Initialize the twilio client
+# Initialize the twilio client with environment variables
 client = Client(ACCOUNT_ID, TWILIO_TOKEN)
 
 # Function used to send a message using the twilio api
@@ -35,7 +40,11 @@ def process_msg(msg):
         response += 'Type $<stock_symbol> to get the latest information on a stock'
     elif '$' in msg:
         data = msg.split('$')
+
+        # Get just the stock symbol from the input "aapl"
         stock_symbol = data[1]
+        
+        # Use the imported function from the marketstack.py file by sending in the stock symbol
         stock_info = get_stock_info(stock_symbol)
         
         # Format our response for the user
@@ -47,14 +56,15 @@ def process_msg(msg):
             + "Volume: " + stock_info['volume']
 
     else:
-        response = 'Please type <Help> for instructions on how to run the MarketStack Bot'
+        response = 'Please type <Help> for instructions on how to run the MarketStackBot'
     return response
 
-@application.route('/')
+@app.route('/')
 def hello():
     return "Hello World"
 
-@application.route('/webhook', methods=["POST"])
+# The webhook that twilio routes messages to.
+@app.route('/webhook', methods=["POST"])
 def webhook():
     f = request.form
 
