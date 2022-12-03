@@ -33,7 +33,7 @@ def process_msg(msg):
     if msg == 'Help':
         response = 'Hello, welcome to the MarketStack Bot! '
         response += 'Type $<stock_symbol> to get the latest information on a stock'
-    elif '$:' in msg:
+    elif '$' in msg:
         data = msg.split('$')
         stock_symbol = data[1]
         stock_info = get_stock_info(stock_symbol)
