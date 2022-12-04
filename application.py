@@ -36,14 +36,14 @@ def process_msg(msg):
     response = ""
 
     if msg == 'Help':
-        response = 'Hello, welcome to the MarketStack Bot! '
+        response = 'Hello, welcome to the MarketStackBot! '
         response += 'Type $<stock_symbol> to get the latest information on a stock'
     elif '$' in msg:
         data = msg.split('$')
 
         # Get just the stock symbol from the input "aapl"
         stock_symbol = data[1]
-        
+
         # Use the imported function from the marketstack.py file by sending in the stock symbol
         stock_info = get_stock_info(stock_symbol)
         
