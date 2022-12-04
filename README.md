@@ -38,11 +38,11 @@ Flask web application for a WhatsApp Chatbot that gives the user information abo
 
 
 ### Built With
-*  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-*  ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-*  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+*  [![Python][python-shield]][python-url]
+*  [![Flask][flask-shield]][flask-url]
+*  [![Visual Studio Code][Visual Studio Code-shield]][Visual Studio Code-url]
 ### Deployed On
-*  ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+*  [![Heroku][Heroku-shield]][Heroku-url]
 ### API's Used
 * Twilio
 * MarketStack
@@ -90,3 +90,11 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/adam-geltz/
 [product-screenshot]: images/screenshot.png
+[python-shield]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[python-url]: https://www.python.org/
+[flask-shield]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
+[flask-url]: https://flask.palletsprojects.com/en/2.2.x/
+[Visual Studio Code-shield]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
+[Visual Studio Code-url]: https://visualstudio.microsoft.com/
+[Heroku-shield]: https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white
+[Heroku-url]: https://id.heroku.com/login
