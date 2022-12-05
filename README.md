@@ -44,8 +44,8 @@ Flask web application for a WhatsApp Chatbot that gives the user information abo
 ### Deployed On
 *  [![Heroku][Heroku-shield]][Heroku-url]
 ### API's Used
-* Twilio
-* MarketStack
+* [Twilio](https://www.twilio.com/)
+* [MarketStack](https://marketstack.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -56,6 +56,13 @@ Flask web application for a WhatsApp Chatbot that gives the user information abo
 </p>
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
