@@ -49,13 +49,11 @@ Flask web application for a WhatsApp Chatbot that gives the user information abo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ROADMAP -->
+<!-- System Design -->
 ## Design
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+<p align="center">
+  <img src="" alt="animated" />
+</p>
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
