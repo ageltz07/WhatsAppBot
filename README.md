@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Flask web application for a WhatsApp Chatbot that gives the user information about a stock.
+Flask web application for a WhatsApp Chatbot that gives the user information about a stock. I built this app to learn a little more about web development, REST Api's, deployment and working with external apis.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -52,26 +52,12 @@ Flask web application for a WhatsApp Chatbot that gives the user information abo
 <!-- System Design -->
 ## Design
 <p align="center">
-  <img src="" alt="animated" />
+  <img src="https://github.com/ageltz07/WhatsAppBot/blob/main/WhatsAppBotDesign.drawio.png"/>
 </p>
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
