@@ -2,13 +2,14 @@
 from flask import Flask
 from flask import request
 
+# Import openai 
+import openai
+
 # Need to work with the twilio api
 from twilio.rest import Client
 
 # For accessing environment variables
 import os
-
-from marketstack import get_stock_info 
 
 # Initialize the flask application
 app = Flask(__name__)
@@ -16,6 +17,9 @@ app = Flask(__name__)
 # Fetch needed environment variables
 ACCOUNT_ID = os.environ.get('TWILIO_ACCOUNT')
 TWILIO_TOKEN = os.environ.get('TWILIO_TOKEN')
+
+# OpenAI api key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Twilio number for sending messages
 TWILIO_NUMBER = 'whatsapp:+14155238886'
@@ -31,33 +35,18 @@ def send_msg(msg, recipient):
         to=recipient
     )
 
-# Function needed for message processing
-def process_msg(msg):
-    response = ""
-
-    if msg == 'Help':
-        response = 'Hello, welcome to the MarketStackBot! '
-        response += 'Type $<stock_symbol> to get the latest information on a stock'
-    elif '$' in msg:
-        data = msg.split('$')
-
-        # Get just the stock symbol from the input "aapl"
-        stock_symbol = data[1]
-
-        # Use the imported function from the marketstack.py file by sending in the stock symbol
-        stock_info = get_stock_info(stock_symbol)
-        
-        # Format our response for the user
-        response = "$" + stock_info['symbol'] + " info:\n" \
-            + "Open: " + stock_info['opening_price'] + "\n"\
-            + "High: " + stock_info['high_price'] + "\n" \
-            + "Low: " + stock_info['low_price'] + "\n" \
-            + "Close: " + stock_info['closing_price'] + "\n" \
-            + "Volume: " + stock_info['volume']
-
-    else:
-        response = 'Please type <Help> for instructions on how to run the MarketStackBot'
-    return response
+def get_msg_resp(msg):
+    print(msg)
+    response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=msg + "\n",
+    temperature=0.3,
+    max_tokens=100,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )
+    return "OpenAI:\n" + response["choices"][0]['text']
 
 @app.route('/')
 def hello():
@@ -72,7 +61,7 @@ def webhook():
     # our response to them.
     msg = f['Body']
     sender = f['From']
-    response = process_msg(msg)
+    response = get_msg_resp(msg)
     send_msg(response, sender)
 
     return 'OK', 200
