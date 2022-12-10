@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Flask web application for a WhatsApp Chatbot that gives the user information about a stock. I built this app to learn a little more about web development, REST Api's, deployment and working with external apis.
+Flask web application for an OpenAI Chatbot that allows the user to do multiple things such as translate English to other language or answer questions. The user Uses WhatsApp to communicate with the bot. I built this project because I wanted to learn a little more about using external API's from inside a web application. I was intrigued by the new ChatGPT from OpenAI but there is no API for that yet so I just used what was available in there current api.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -45,14 +45,14 @@ Flask web application for a WhatsApp Chatbot that gives the user information abo
 *  [![Heroku][Heroku-shield]][Heroku-url]
 ### API's Used
 * [Twilio](https://www.twilio.com/)
-* [MarketStack](https://marketstack.com/)
+* [OpenAI](https://openai.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- System Design -->
 ## Design
 <p align="center">
-  <img src="https://github.com/ageltz07/WhatsAppBot/blob/main/WhatsAppBotDesign.drawio.png"/>
+  <img src="https://github.com/ageltz07/WhatsAppBot/blob/main/WhatsApp.drawio.png"/>
 </p>
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
