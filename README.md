@@ -21,7 +21,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-## Project Example
+## Project Example GIF
 <!-- PROJECT LOGO -->
 <p align="center">
   <img src="https://github.com/ageltz07/WhatsAppBot/blob/main/whatsAppBot.GIF" alt="animated" />
