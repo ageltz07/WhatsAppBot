@@ -31,7 +31,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Flask web application for an OpenAI Chatbot that allows the user to do multiple things such as translate English to other language or answer questions. The user Uses WhatsApp to communicate with the bot. I built this project because I wanted to learn a little more about using external API's from inside a web application. I was intrigued by the new ChatGPT from OpenAI but there is no API for that yet so I just used what was available in there current api.
+This is a flask web application for an Chatbot utilizing OpenAI's "Davinci" Language model that allows the user to do multiple things such as translate English to other language answer general questions and much more. The user uses WhatsApp to communicate with the bot their message is routed to Twilio which then routes to the Flask app hosted on Heroku which uses the OpenAI api to get a response from a Davinci model and then sends it back to the user.
+
+I was intrigued by the new ChatGPT from OpenAI that was just opened up to the public but there is no API for that yet so I just used what was available in their current api. I also built this project because I wanted to learn a little more about using external API's from inside a web application. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
